@@ -1,0 +1,670 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-size: 62.5%;
+    font-size: 10px;
+}
+/*-- Inspiration taken from abdo steif -->
+/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
+
+/* Navbar section */
+.bgimagebwh{
+   /* background-image: url(https://i.pinimg.com/736x/c8/0c/4a/c80c4ae0ba5657d5b3deecc6f4ca33a6.jpg);*/
+   background-color: #EEEEEE;
+}
+.nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+}
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+.nav div.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.nav div.logo a:hover {
+    color: #d87300;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 65px;
+    font-size: 2.4rem;
+}
+
+.nav div.main_list ul li a:hover {
+    color: #d87300;
+}
+
+
+/* Home section */
+
+.jumbotron {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color:rgba(0, 0, 0, 0.25);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: auto;
+    height: auto;
+    font-size: 14px;
+}
+.centered {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color:rgba(0, 0, 0, 0.25);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+.home {
+    width: 100%;
+    height: 100vh;
+    background-image: url(homepagebg.png);
+    background-position: center top;
+    background-size:cover;
+
+}
+.home .display{
+    padding-top: 250px;
+    padding-left: 100px;
+    text-align: left;
+    width: 100%;
+    max-width: 600;
+    font-size: 40px;
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+
+.navTrigger {
+    display: none;
+}
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .navTrigger {
+        display: block;
+    }
+    .nav div.logo {
+        margin-left: 15px;
+    }
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        height: auto;
+        display: none;
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #111;
+        /*same background color of navbar*/
+        background-position: center top;
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 3rem;
+        padding: 20px;
+    }
+    .nav div.media_button {
+        display: block;
+    }
+}
+
+
+/* Animation */
+/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+
+.navTrigger {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+}
+
+.navTrigger i {
+    background-color: #fff;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes inT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes outT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+.affix {
+    padding: 0;
+    background-color: #111;
+    opacity: 100%;
+    z-index: 100; 
+}
+
+.zval {
+    z-index: 50;
+}
+
+
+
+.learn {
+    padding: 70px;
+    display: flex;
+    align-items: center;
+}
+.learn .p{
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Roboto Slab', serif;
+    margin-left: 20px;
+}
+.learn .bg{
+    height: 400px;
+    box-shadow: 25px 25px 50px 0 #EEEEEE inset, -25px -25px 50px 0 #EEEEEE inset; 
+    background-image: url(https://i2.wp.com/www.coday.id/wp-content/uploads/2019/06/Biaya-Kursus-Barista-di-Jogja.jpg?w=626&ssl=1);
+}
+.myH2 {
+    margin-left: 20px;
+    font-size: 5rem;
+    color:black;
+    font-family: 'Roboto Slab', serif;
+}
+.myP {
+    text-align: justify;
+    padding-left:15%;
+    padding-right:15%;
+    font-size: 20px;
+}
+@media all and (max-width:700px){
+    .myP {
+        padding:2%;
+    }
+}
+
+
+body{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+span{
+    font-size:15px;
+}
+
+a{
+    text-decoration:none; 
+    color:  #0b0135;
+    border-bottom:2px solid #0b0135;
+  }
+.box{
+    padding:25px;
+    background-color: #3F2C1F;
+    background-image: url(https://image.freepik.com/free-photo/close-up-background-coffee-beans_23-2148349677.jpg);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box .card-width{
+    width: 100%;
+}
+.box-part{
+    background-color: rgba(0, 0, 0, 0.25);;
+    border-radius:0;
+    padding:30px 5px;
+    margin:30px 5px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15px;
+
+}
+
+.box .container{
+    padding: 70px;
+    margin: auto;
+    color: #EEEEEE;
+}
+.box .container .card{
+    height: 400px;
+    background-color: #393e46;
+    box-shadow: 25px 25px 100px 0 black;
+}
+.box .container .icon{
+    max-width: 75px;
+    max-height: 75px;
+    margin: auto;
+    margin-top: 50px;
+}
+.text{
+    margin:20px 0px;
+    color:beige;
+    
+}
+
+.fa{
+     color:#4183D7;
+}
+
+.isicard{
+    font-family:Arial, Helvetica, sans-serif;
+}
+.card{
+    font-size: 11.179px;
+    background-color:#EEEEEE;
+}
+.pemisah{
+    margin-bottom: 1%;
+}
+.pemisah2{
+    margin-top: 1%;
+    margin-left: 1.35%;
+    margin:auto;
+}
+.full {
+    width: 100%;    
+}
+.gap {
+	height: 30px;
+	width: 100%;
+	clear: both;
+	display: block;
+}
+.footer {
+	background:#222831;
+	height: auto;
+	padding-bottom: 30px;
+	position: relative;
+	width: 100%;
+	border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #DDDDDD;
+    font-family: 'Montserrat', sans-serif;
+}
+.footer p {
+	margin: 0;
+}
+.footer img {
+	max-width: 100%;
+}
+.footer h3 {
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 27px;
+	padding: 40px 0 0px;
+	text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.footer h4 {
+	color: white;
+	font-size: 3em;
+	font-weight: 600;
+	line-height: 38px;
+	padding: 40px 0 10px;
+  font-weight: lighter
+}
+
+.footer ul {
+	font-size: 13px;
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
+	margin-top: 0px;
+	color: #7F8C8D;
+  padding: 0 0 8px 0;
+}
+
+.email{
+  border-bottom: 3px solid #fff;
+}
+.footer ul li a {
+	padding: 0 0 12px 0;
+	display: block;
+}
+.footer a {
+	color: white;
+  font-weight: lighter;
+}
+
+.footer p {
+	color: white;
+  font-weight: lighter;
+  font-size: 17px;
+}
+
+.footer a:hover {
+	text-decoration:none;
+  font-weight: bold;
+}
+.supportLi h4 {
+	font-size: 20px;
+	font-weight: lighter;
+	line-height: normal;
+	margin-bottom: 0 !important;
+	padding-bottom: 0;
+}
+
+.bg-gray {
+	background-image: -moz-linear-gradient(center bottom, #BBBBBB 0%, #F0F0F0 100%);
+	box-shadow: 0 1px 0 #B4B3B3;
+}
+
+
+.footer a {
+	color: whitesmoke;
+}
+
+.footer-bottom {
+  margin-top: 2em;
+	border-top: 1px solid #DDDDDD;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.footer-bottom p.pull-left {
+	padding-top: 6px;
+  font-size: 0.75em
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background: #f1f1f1;
+    color: black;
+  }
+  
+  .navbar a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .main {
+    padding: 16px;
+    margin-bottom: 30px;
+  }
+
+.spasigambar{
+    width: 487px;
+    height: 325px;
+    margin-right: 20px;
+}
+
+.kopidunia{
+    width: 1150px;
+    height: 350px;
+    background-repeat: no-repeat;
+}
+
+.textgambar{
+    padding: 5px;
+    color: darkred;
+    font-size: 10pt;
+}
+
+.footcenter{
+    text-align: center;
+    color: blanchedalmond;
+}

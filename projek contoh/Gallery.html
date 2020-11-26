@@ -1,0 +1,487 @@
+<html>
+    <head>
+        <style>
+            body, html {
+              height: 100%;
+              margin: 0px;
+              font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            * {
+              box-sizing: border-box;
+            }
+            
+            .bg-image {
+              /* The image used */
+              background-image: url("https://majalah.ottencoffee.co.id/wp-content/uploads/2017/03/636083143592575296-219541664_coffeeeeeee.jpg");
+              
+              /* Add the blur effect */
+              
+              
+              
+              /* Full height */
+              height: 100%;
+              
+              position: center; 
+              
+              /* Center and scale the image nicely */
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
+            
+            /* Position text in the middle of the page/image */
+            .bg-text {
+              background-color: rgb(0,0,0); /* Fallback color */
+              background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+              color: white;
+              font-weight: bold;
+              border: 3px solid #f1f1f1;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              z-index: 2;
+              width: 80%;
+              padding: 20px;
+              text-align: center;
+            }
+            </style>
+    <title>Navbar</title>
+    <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+    
+    .active {
+      background-color: blue;
+    }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    * {box-sizing: border-box}
+    body {font-family: Verdana, sans-serif; margin:0}
+    .mySlides {display: none}
+    img {vertical-align: middle;}
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position:relative;
+      margin: auto;
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width:fit-content;
+      padding: 30px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: left;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @-webkit-keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+    }
+    </style>
+
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial;
+      font-size: 17px;
+    }
+    
+    .container {
+      position: relative;
+      max-width: 800px;
+      margin: none;
+    }
+    
+    .container img {vertical-align: middle;}
+    
+    .container .content {
+      position: absolute;
+      bottom: 0;
+      background: rgb(0, 0, 0); /* Fallback color */
+      background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+      color: #f1f1f1;
+      width: 100%;
+      padding: 20px;
+    }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+    position: relative;
+      margin-left:100px;
+      margin-right: 100px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .header {
+      text-align: left;
+      padding: 32px;
+    }
+    
+    .row {
+      display: -ms-flexbox; /* IE 10 */
+      display: flex;
+      -ms-flex-wrap: wrap; /* IE 10 */
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+    
+    /* Create two equal columns that sits next to each other */
+    .column {
+      -ms-flex: 50%; /* IE 10 */
+      flex: 50%;
+      padding: 0 4px;
+    }
+    
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+    }
+    
+    /* Style the buttons */
+    .btn {
+      border: none;
+      outline: none;
+      padding: 10px 16px;
+      background-color: #f1f1f1;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    
+    .btn:hover {
+      background-color: #ddd;
+    }
+    
+    .btn.active {
+      background-color: #666;
+      color: white;
+    }
+    </style>
+    <style>
+        /*untuk teks heading di tag <body>*/
+            body {
+    background: url(https://www.worldofghibli.id/wp-content/uploads/2020/05/gambar-kopi-wallpaper-hd.jpg) no-repeat;
+    background-size: 100% 100%;
+    background-attachment:fixed;
+}
+    </style>
+
+
+</head>
+<body>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">About us</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li style="float:right"><a class="active" href="#about">Login</a></li>
+      </ul>
+      <h1 style="color: whitesmoke;">Go Read and Share!! :)</h1>
+<div  class="slideshow-container" style="background-image: url(https://www.worldofghibli.id/wp-content/uploads/2020/05/gambar-kopi-wallpaper-hd.jpg);">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="https://i0.wp.com/jendralgaram.com/wp-content/uploads/2019/10/Slide10-10.jpg?resize=800%2C450&ssl=1" style="width:100%">
+      <div class="text">Indah Kopi</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="https://i2.wp.com/jendralgaram.com/wp-content/uploads/2019/10/Slide3-12.jpg?fit=800%2C450&ssl=1" style="width:100%">
+      <div class="text">Seperti Kopi</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="https://i0.wp.com/jendralgaram.com/wp-content/uploads/2019/10/Slide1-11.jpg?resize=800%2C450&ssl=1" style="width:100%">
+      <div class="text">Rasa Kopi</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+      
+    <!-- Header -->
+<div class="header" id="myHeader">
+    <h1 style="color: white;">Gallery Kopi</h1>
+    <p style="color: white;">Hal yang mungkin akan membantu anda!</p>
+  </div>
+  
+  <!-- Photo Grid -->
+  
+        <div class="container" >
+              <a href="https://www.tokopedia.com/blog/macam-macam-jenis-kopi-di-dunia-tvl/#:~:text=Dari%20namanya%20saja%2C%20tentu%20kamu,seperti%20Amerika%20Serikat%20dan%20Eropa.">
+            <img src="https://ecs7.tokopedia.net/blog-tokopedia-com/uploads/2020/03/biji-kopi-Liberika-1.jpg" alt="Notebook" style="width:100%;">
+            </a>
+            <div class="content">
+              <h1>Cerita Kopi</h1>
+              <p>Kopi merupakan minuman nikmat yang berasal dari biji kopi yang telah disangrai dan dihaluskan menjadi bubuk...</p>
+            </div>
+          </div>
+        <br>
+        <div class="container" >
+            <a href="https://kopitree.co.id/apa-itu-kopi-arabika/#:~:text=Arabika%20adalah%20spesies%20kopi%20yang,secara%20seksual%20satu%20sama%20lain.">
+            <img src="https://kopitree.co.id/wp-content/uploads/2018/09/Apa-Itu-Kopi-Arabika.jpg" alt="Notebook" style="width:100%;">
+            </a>
+            <div class="content">
+              <h1>Kopi Arabika</h1>
+              <p>Kopi Arabika adalah salah satu dari dua spesies tanaman kopi yang ada berada dalam budidaya secara global. (yang lainnya adalah C. Canephora, atau yang biasa kita kenal dengan sebutan Kopi Robusta). Arabika adalah spesies kopi yang dominan di Amerika Tengah, dan selatan, dan sebagian besar Negara Afrika Timur, dan dianggap menghasilkan kualitas cup tertinggi.  Spesies Arabika terdiri dari banyak varietas atau kultivar/jenis-jenis yang berbeda yang dapat bereproduksi secara seksual satu sama lain...</p>
+            </div>
+          </div>
+        <br>
+          <div class="container" >
+              <a href="https://coffeeland.co.id/5-kopi-arabika-terbaik-di-indonesia/#:~:text=Tak%20mengherankan%20Arabika%20menjadi%20kopi,%2C%20Arabika%20Flores%20(NTT).">
+            <img src="https://coffeeland.co.id/wp-content/uploads/2017/08/08aacfb6-3cda-4ceb-9ca1-MMKM-510x680.jpg" alt="Notebook" style="width:100%;">
+            </a>
+            <div class="content">
+              <h1>Beragam Kopi Arabika Indonesia</h1>
+              <p>Popularitas kopi arabika sudah tidak di ragukan lagi. Bisa di katakan kopi jenis ini kopi yang paling banyak di konsumsi oleh pencipta kopi di seluruh dunia. Ada beberapa Fakta menarik tentang kopi arabika, yaitu : Kopi arabika cukup sulit di tanam, rentan terhadapa hama dan cuaca. Kopi awalnya hanya tumbuh di Etiopia dan semenanjung Arab...</p>
+            </div>
+          </div>
+          <br>
+          <div class="container" >
+              <a href="https://alamtani.com/kopi-robusta/">
+            <img src="https://alamtani.com/wp-content/uploads/2014/01/kopi-robusta.jpg" alt="Notebook" style="width:100%;">
+            </a>
+            <div class="content">
+              <h1>Kopi Robusta</h1>
+              <p>Robusta berasal dari kata ‘robust’ yang artinya kuat, sesuai dengan gambaran postur (body) atau tingkat kekentalannya yang kuat. Kopi robusta bukan merupakan spesies karena jenis ini turunan dari spesies Coffea canephora...</p>
+            </div>
+          </div>
+        <br>
+          <div class="container">
+            <a href="https://tamandelta.com/jenis-kopi-robusta-indonesia/">
+          <img src="https://tamandelta.com/wp-content/uploads/2020/03/Jenis-Kopi-Robusta-Indonesia-712x400.jpeg" alt="Notebook" style="width:100%;">
+          </a>
+          <div class="content">
+            <h1>Beragam Kopi Robusta Indonesia </h1>
+            <p>Jenis Kopi Robusta Indonesia – Kopi robusta dikenal dengan karakternya yang strong dan bold. Kopi robusta juga dikenal dengan cita rasanya yang pahit, namun disisi lain jenis kopi yang satu ini memiliki penggemar dari berbagai daerah di Indonesia...</p>
+          </div>
+        </div>
+    </br>
+  
+    <div class="header" id="myHeader">
+        <h1>Feel Free To Explore</h1>
+        <button class="btn active" onclick="four()">1</button>
+        <button class="btn " onclick="two()">2</button>
+      </div>
+    <div class="row"> 
+        <div class="column">
+          <img src="https://ecs7.tokopedia.net/blog-tokopedia-com/uploads/2019/01/Blog_Ini-Dia-Perbedaan-Kopi-Robusta-dan-Arabica-Pecinta-Kopi-Wajib-Tahu.jpg" style="width:100%">
+          <img src="https://cdn1-production-images-kly.akamaized.net/NHb6F47LFlYceWvAqPGKDed4VuY=/640x480/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/1706641/original/005955300_1505121617-Biji-Kopi7.jpg" style="width:100%">
+          <img src="https://cf.shopee.co.id/file/b16d4ee8838994b1b37be5f98f1cdb7e" style="width:100%">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSsi20lKzjmSUBYrNkfV803MSc6o9lrgsKiew&usqp=CAU" style="width:100%">
+          <img src="https://i.pinimg.com/originals/4d/25/3a/4d253ad2d21fc46313e519e7c51f4455.jpg" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1525629545813-e4e7ba89e506?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" style="width:100%">
+          <img src="https://images.pexels.com/photos/1414304/pexels-photo-1414304.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" style="width:100%">
+          <img src="https://p4.wallpaperbetter.com/wallpaper/975/219/729/background-board-coffee-wallpaper-preview.jpg" style="width:100%">
+          <img src="https://p4.wallpaperbetter.com/wallpaper/976/931/580/cappuccino-coffee-beans-love-hearts-wallpaper-preview.jpg" style="width:100%">
+          <img src="https://www.rumahmesin.com/wp-content/uploads/2019/10/553518.jpg" style="width:100%">
+        </div>   
+        <div class="column">
+          <img src="https://i.pinimg.com/originals/7d/b9/62/7db96283e667f4ae189da7541b909059.png" style="width:100%">
+          <img src="https://wallpaperstream.com/wallpapers/full/coffee-art/Latte-Art-Cappuccino-Cup-Wallpaper.jpg" style="width:100%">
+          <img src="https://img.beritasatu.com/cache/beritasatu/910x580-2/28092012080000.jpg" style="width:100%">
+          <img src="https://cdn.idntimes.com/content-images/post/20181001/b220d7fc057182d0cf147dadfa777323.jpg" style="width:100%">
+          <img src="https://cdn.idntimes.com/content-images/post/20181001/2484da92e9639fd298232475304e604b_600x400.jpg" style="width:100%">
+
+        </div>
+        <div class="column">
+            <img src="https://a-static.besthdwallpaper.com/jantung-kopi-crema-cappuccino-hari-valentine-wallpaper-2560x1440-13735_51.jpg" style="width:100%">
+            <img src="https://inspirasipagi.id/wp-content/uploads/2018/08/woman-in-blue-shirt-with-brown-sun-hat-near-coffee-shop-counter-hd-wallpaper-shops.jpg" style="width:100%">
+            <img src="https://lh3.googleusercontent.com/proxy/5dKrhvy8SkOv944zlIvSOtekCgTKcCwmPZsBasVKRjPg7JZluVov9AYbQDf79LlAjBStCquegjbItF6l0tqWL2KlnXSjDptz5yPNtE0uBwwhFI91LcUn6eIA-nsIgHBadVwjqrGh0oOUE571iptFBmeZs6kkBrrETWQCjUWWfUtISFXjlU41l8PdT2Ezf3hxtykah7gmu-pKn8DllSQkJ8HrTvmKE7Dc0WtvgajFAojyDpEkXVuBVDfp85s44grvd43Yjg" style="width:100%">
+            <img src="https://cf.shopee.co.id/file/08e6cb4b0eef0121fa87d7b0e16fa231" style="width:100%">
+            <img src="https://www.wallpapertip.com/wmimgs/245-2457546_coffee-shop-wallpaper.jpg" style="width:100%">
+          </div>   
+    </div>     
+
+
+      <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+        <script>
+            // Get the elements with class="column"
+            var elements = document.getElementsByClassName("column");
+            
+            // Declare a loop variable
+            var i;
+            
+            // Full-width images
+            function one() {
+                for (i = 0; i < elements.length; i++) {
+                elements[i].style.msFlex = "100%";  // IE10
+                elements[i].style.flex = "100%";
+              }
+            }
+            
+            // Two images side by side
+            function two() {
+              for (i = 0; i < elements.length; i++) {
+                elements[i].style.msFlex = "50%";  // IE10
+                elements[i].style.flex = "50%";
+              }
+            }
+            
+            // Four images side by side
+            function four() {
+              for (i = 0; i < elements.length; i++) {
+                elements[i].style.msFlex = "25%";  // IE10
+                elements[i].style.flex = "25%";
+              }
+            }
+            
+            // Add active class to the current button (highlight it)
+            var header = document.getElementById("myHeader");
+            var btns = header.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+              btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+              });
+            }
+            </script>
+</body>
+</html>
